@@ -1,6 +1,6 @@
 // Criando escopo para o arquivo todo com IIFE
 // Immediately Invoked Function Expression
-(function(){
+;(function(){
 
     const btn = document.querySelector("#btnMudaLayout")
 

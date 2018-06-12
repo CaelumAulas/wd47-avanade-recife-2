@@ -1,8 +1,8 @@
 // IIFE
-(function () {
+;(function () {
     const btn = document.querySelector("#btnAjuda")
 
-    btn.addEventListener("drag", function(){
+    btn.addEventListener("click", function(){
 
         const instrucoes = [
             "Bem vindos ao Ceep",
