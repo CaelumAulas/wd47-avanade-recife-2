@@ -27,19 +27,17 @@
         Ceep
       </h1>
       <div class="opcoesDaPagina">
-        <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao">
+        <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao no-js">
         
         
-        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao">
-          <div>
-            Linhas
-          </div>
+        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
+          Linhas
         </button>
         
-        <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao">
+        <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           ?
         </button>
-        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado">
+        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado no-js">
           <svg class="botaoSync-icone">
             <use xlink:href="#iconeSincronizar"></use>
           </svg>
@@ -47,12 +45,12 @@
       </div>
     </header>
 
-    <form class="formNovoCartao container">
+    <form class="formNovoCartao container no-js">
       <textarea class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>
       <input class="formNovoCartao-salvar" type="submit" value="Salvar">
     </form>
 
-    <section class="container mural" style="font-size: 1.3rem;">
+    <section class="container mural seiLah" style="font-size: 1.3rem;">
  
       <article id="cartao_1" class="cartao">
         <div class="opcoesDoCartao">
@@ -148,4 +146,5 @@
     
   </body>
   <script src="js/opcoesDaPagina/btnMudaLayout.js"></script>
+  <script src="js/opcoesDaPagina/btnAjuda.js"></script>
 </html>
