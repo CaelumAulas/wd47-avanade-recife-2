@@ -11,6 +11,7 @@
 		justify-content: space-around;
 	}
 
+	/* modifcador --linha */
 	.mural--linha {
 		flex-direction: column;
 	}
