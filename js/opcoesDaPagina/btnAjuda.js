@@ -1,5 +1,7 @@
 // IIFE
 ;(function () {
+    "use strict"
+
     const btn = document.querySelector("#btnAjuda")
 
     btn.addEventListener("click", function(){
@@ -11,7 +13,7 @@
         ]
 
         for(var i = 0; i < instrucoes.length; i++){
-            alert(instrucoes[i])
+            adicionarCartao(instrucoes[i])
         }
     })
 
