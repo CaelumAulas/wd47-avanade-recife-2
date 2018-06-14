@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "dev": "babel src --out-dir dist --copy-files --presets env --watch"
+    }
+}

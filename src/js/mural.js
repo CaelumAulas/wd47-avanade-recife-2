@@ -20,10 +20,9 @@ const adicionarCartao = (function(){
     return function (conteudo){
         
         numeroCartao = numeroCartao + 1
-        
-        // Elemento do jquery
-        const $cartao = $(`
-        <article id="cartao_${numeroCartao}" class="cartao" tabindex="0">
+    
+        const cartao = $(`
+        <article id="cartao_${numeroCartao}" class="cartao " tabindex="0">
             <div class="opcoesDoCartao">
             <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
                 <svg><use xlink:href="#iconeRemover"></use></svg>
@@ -53,31 +52,32 @@ const adicionarCartao = (function(){
         </article>
         `)
     
-        $cartao
+        cartao
             .on("focusin", function(){
-                $cartao.addClass("cartao--focado")
+                cartao.addClass("cartao--focado")
             })
             .on("focusout", function(){
-                $cartao.removeClass("cartao--focado")
+                cartao.removeClass("cartao--focado")
             })
             .on("click", ".opcoesDoCartao-remove" ,function(evento){
-                $cartao.addClass("cartao--some")
-                $cartao.on("transitionend", function remove(){
-                    $cartao.remove()
+                cartao.addClass("cartao--some")
+                cartao.on("transitionend", function remove(){
+                    cartao.remove()
                 })
             })
-            .on("input", ".opcoesDoCartao-radioTipo", function(evento){
+            .on("change", ".opcoesDoCartao-radioTipo", function(evento){
                 const inputSelecionado = evento.target
                 const cor = inputSelecionado.value
-                $cartao.css("background-color", cor)
+                cartao.css("background-color", cor)
             })
             .on("keydown", ".opcoesDoCartao-tipo", function(evento){
+                console.log(evento.key)
                 if((evento.key == "Enter" || evento.key == " ")){
                     evento.target.click()
                 }
             })  
 
-        $cartao.appendTo('.mural')
+        cartao.appendTo('.mural')
     
     }
 })()
