@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/opcoesDaPagina.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/cartao.css">
     <link rel="stylesheet" href="css/formNovoCartao.css">
+    
     <title>Ceep</title>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="iconeEditar" viewBox="0 0 384 384"><title>Editar</title><path fill="rgba(0,0,0,.5)" d="M378 86l-39 39-80-80 39-39q6-6 15-6t15 6l50 50q6 6 6 15t-6 15zM0 304L236 68l80 80L80 384H0v-80z"/></symbol>
@@ -37,7 +39,7 @@
         <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           ?
         </button>
-        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado no-js">
+        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync no-js">
           <svg class="botaoSync-icone">
             <use xlink:href="#iconeSincronizar"></use>
           </svg>
@@ -56,14 +58,31 @@
 
   <!-- https://bit.ly/2JKXd9L -->
 
+  <script src="js/jquery.min.js"></script>
+
   <script src="js/keyboard-polyfill.js"></script>
   <script>keyboardeventKeyPolyfill.polyfill();</script>
 
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"  async></script>
 
   <script src="js/opcoesDaPagina/btnMudaLayout.js"></script>
   <script src="js/opcoesDaPagina/btnAjuda.js"></script>
+  <script src="js/opcoesDaPagina/btnSync.js"></script>
   <script src="js/formNovoCartao.js"></script>
   <script src="js/mural.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  
+  <!-- JSONP -->
+  <!-- <script>
+    function carregarCartoes(respostaObjeto){
+
+      const cartoes = respostaObjeto.cartoes
+
+      for(var i = 0; i < cartoes.length; i++){
+        adicionarCartao(cartoes[i].conteudo, cartoes[i].cor)
+      }
+    }
+  </script>
+  <script src="http://ceep.herokuapp.com/cartoes/carregar?usuario=artur.adam@caelum.com.br&callback=carregarCartoes" type="text/javascript" async></script> -->
 </html>

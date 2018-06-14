@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "build": "babel src --out-dir dist --copy-files --presets env",
         "dev": "babel src --out-dir dist --copy-files --presets env --watch"
     }
 }
